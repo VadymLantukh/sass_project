@@ -1,11 +1,25 @@
-@mixin badge-base() {
-  display: inline-block;
-  min-width: 96px;
-  padding: 4px 8px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.07px;
-  text-align: center;
-  border-radius: 20px;
+@use "sass:map";
+
+@mixin viewprot-md {
+  @media (min-width: 767px) {
+    @content;
+  }
 }
+
+@mixin text-gradient {
+  background: var(--hero-name-background);
+  background-clip: text;
+  color: transparent;
+}
+
+// @mixin badge-base() {
+//   display: inline-block;
+//   min-width: 96px;
+//   padding: 4px 8px;
+//   font-size: 14px;
+//   font-weight: 500;
+//   line-height: 20px;
+//   letter-spacing: 0.07px;
+//   text-align: center;
+//   border-radius: 20px;
+// }
